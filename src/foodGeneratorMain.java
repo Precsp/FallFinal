@@ -19,12 +19,19 @@ public class foodGeneratorMain {
         int userMeals = input.nextInt();
         ResturauntOrder userTotalMeal = new ResturauntOrder(userMeals);
         userTotalMeal.validateNumMeals(userMeals);
+        input.close();
 
         //asking user to pick a number between 1-12
-        //System.out.println("Ok! Please pick a number between 1-12");
+        System.out.println("Ok! Please pick a number between 1-12");
         int userNum = input.nextInt();
         ResturauntOrder userNumMeal = new ResturauntOrder (userNum);
         userNumMeal.askForMeal();
+        input.close();
+
+        ResturauntOrder userSatisfaction = new ResturauntOrder();
+        System.out.println("Were you satisfied with your meal?");
+        String userSatis = input.nextLine();
+        userSatisfaction.serverSatisfaction(userSatis);
 
     }
 }

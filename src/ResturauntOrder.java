@@ -44,7 +44,7 @@ public class ResturauntOrder {
                 acceptMeal = true;
             }
         }
-        askForMeal();
+        //askForMeal();
     }
 
     //method will ask user to pick between 1-12
@@ -52,7 +52,7 @@ public class ResturauntOrder {
     {
         //StringBuilder mealChoices = new StringBuilder();
         //looping for however many number of meals the user inputs
-        for (int i = 0; i <= numMeals; i++)
+        for (int i = 0; i < numMeals; i++)
         {
             System.out.println("Enter a number between 1-12 to get food");
             mealOrder = input.nextInt();
@@ -60,55 +60,53 @@ public class ResturauntOrder {
             if (mealOrder == 1)
             {
                 System.out.println("A tiny bowl of cereal and room temperature milk");
-                System.out.println("Press any number to continue");
             }
             else if (mealOrder == 2)
             {
-                String mealOrder2 = "A nice juicy 'Premium' Wagyu Beef steak with a side of refined water ;)";
-                return mealOrder2;
-                //System.out.println ("A nice juicy 'Premium' Wagyu Beef steak with a side of refined water ;)");
-               // System.out.println("Press any number to continue");
+                //String mealOrder2 = "A nice juicy 'Premium' Wagyu Beef steak with a side of refined water ;)";
+                //return mealOrder2;
+                System.out.println ("A nice juicy 'Premium' Wagyu Beef steak with a side of refined water ;)");
+
             }
             else if (mealOrder == 3)
             {
-                System.out.println("Press any number to continue");
-                System.out.println("Press any number to continue");
+                System.out.println("a");
             }
             else if (mealOrder == 4)
             {
-                System.out.println("Press any number to continue");
+                System.out.println("b");
             }
             else if (mealOrder == 5)
             {
-                System.out.println("Press any number to continue");
+                System.out.println("c");
             }
             else if (mealOrder == 6)
             {
-                System.out.println("Press any number to continue");
+                System.out.println("d");
             }
             else if (mealOrder == 7)
             {
-                System.out.println("Press any number to continue");
+                System.out.println("e");
             }
             else if (mealOrder == 8)
             {
-                System.out.println("Press any number to continue");
+                System.out.println("f");
             }
             else if (mealOrder == 9)
             {
-                System.out.println("Press any number to continue");
+                System.out.println("g");
             }
             else if (mealOrder == 10)
             {
-                System.out.println("Press any number to continue");
+                System.out.println("h");
             }
             else if (mealOrder == 11)
             {
-                System.out.println("Press any number to continue");
+                System.out.println("i");
             }
             else if (mealOrder == 12)
             {
-                System.out.println("Press any number to continue");
+                System.out.println("j");
             }
             else {
                 System.out.println ("invalid number!");
@@ -118,6 +116,49 @@ public class ResturauntOrder {
     }
 
 
+public String serverSatisfaction(String satisfaction)
+{
+    String response = "";
+    if (satisfaction.indexOf("no") >= 0)
+    {
+        response = serverResponses();
+    }
+    else if (satisfaction.indexOf("NO") >= 0
+|| satisfaction.indexOf("nah") >= 0 || satisfaction.indexOf("naur") >= 0)
+{
+    response = serverResponses();
+}
+    else
+{
+    response = "yay";
+}
+}
 
+public String serverResponses()
+{
+    int NUMBER_OF_RESPONSES = 4;
+    double responseIndex = Math.random();
+    int typeOfResponse = (int) (responseIndex * NUMBER_OF_RESPONSES);
+    String response = "";
+
+    if (typeOfResponse == 0)
+    {
+        response = "no is not the correct answer >:[";
+    }
+    else if (typeOfResponse == 1)
+    {
+        response = "I won't take no for an answer!";
+    }
+    else if (typeOfResponse == 2)
+    {
+        response = "You better say yes.";
+    }
+    else if (typeOfResponse == 3)
+    {
+        response = "Please say yes I NEEEEEED it :(";
+    }
+    return response;
+
+}
 
 }
