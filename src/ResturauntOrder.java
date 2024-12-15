@@ -7,7 +7,7 @@ import java.util.InputMismatchException;
  */
 public class ResturauntOrder {
     private int numMeals;
-    private int mealOrder;
+    public int mealOrder;
     private String mealName;
     private boolean acceptMeal;
 
@@ -48,7 +48,7 @@ public class ResturauntOrder {
     }
 
     //method will ask user to pick between 1-12
-    public void askForMeal( )
+    public String askForMeal()
     {
         //StringBuilder mealChoices = new StringBuilder();
         //looping for however many number of meals the user inputs
@@ -64,9 +64,10 @@ public class ResturauntOrder {
             }
             else if (mealOrder == 2)
             {
-                //String mealOrder2 = "A nice juicy 'Premium' Wagyu Beef steak with a side of refined water ;)";
-                System.out.println ("A nice juicy 'Premium' Wagyu Beef steak with a side of refined water ;)");
-                System.out.println("Press any number to continue");
+                String mealOrder2 = "A nice juicy 'Premium' Wagyu Beef steak with a side of refined water ;)";
+                return mealOrder2;
+                //System.out.println ("A nice juicy 'Premium' Wagyu Beef steak with a side of refined water ;)");
+               // System.out.println("Press any number to continue");
             }
             else if (mealOrder == 3)
             {
@@ -113,7 +114,7 @@ public class ResturauntOrder {
                 System.out.println ("invalid number!");
             }
         }
-        return mealChoices.toString();
+        return "Thanks!";
     }
 
 
