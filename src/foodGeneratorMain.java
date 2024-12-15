@@ -17,20 +17,14 @@ public class foodGeneratorMain {
         //asking for user input on number of meals they want
         System.out.println("How many meals would you like to have today?");
         int userMeals = input.nextInt();
-
-        //asking user to pick a number between 1-12
-        System.out.println("Ok! Please pick a number between 1-12");
-        int userNum = input.nextInt();
-
         ResturauntOrder userTotalMeal = new ResturauntOrder(userMeals);
-        ResturauntOrder userNumMeal = new ResturauntOrder (userNum);
-
         userTotalMeal.validateNumMeals(userMeals);
 
-
-
-
-
+        //asking user to pick a number between 1-12
+        //System.out.println("Ok! Please pick a number between 1-12");
+        int userNum = input.nextInt();
+        ResturauntOrder userNumMeal = new ResturauntOrder (userNum);
+        userNumMeal.askForMeal();
 
     }
 }
