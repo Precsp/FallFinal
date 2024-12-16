@@ -26,12 +26,12 @@ public class foodGeneratorMain {
         int userNum = input.nextInt();
         ResturauntOrder userNumMeal = new ResturauntOrder (userNum);
         userNumMeal.askForMeal();
-        input.close();
+        //input.close();
 
-        ResturauntOrder userSatisfaction = new ResturauntOrder();
-        System.out.println("Were you satisfied with your meal?");
-        String userSatis = input.nextLine();
-        userSatisfaction.serverSatisfaction(userSatis);
+       // ResturauntOrder userSatisfaction = new ResturauntOrder();
+       // System.out.println("Were you satisfied with your meal?");
+       // String userSatis = input.nextLine();
+       // userSatisfaction.serverSatisfaction(userSatis);
 
     }
 }

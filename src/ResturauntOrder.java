@@ -42,9 +42,10 @@ public class ResturauntOrder {
             {
                 System.out.println("Great!");
                 acceptMeal = true;
+                break;
             }
         }
-        //askForMeal();
+        askForMeal();
     }
 
     //method will ask user to pick between 1-12
@@ -116,49 +117,49 @@ public class ResturauntOrder {
     }
 
 
-public String serverSatisfaction(String satisfaction)
-{
-    String response = "";
-    if (satisfaction.indexOf("no") >= 0)
-    {
-        response = serverResponses();
-    }
-    else if (satisfaction.indexOf("NO") >= 0
-|| satisfaction.indexOf("nah") >= 0 || satisfaction.indexOf("naur") >= 0)
-{
-    response = serverResponses();
-}
-    else
-{
-    response = "yay";
-}
-}
+//public String serverSatisfaction(String satisfaction)
+//{
+    //String response = "";
+    //if (satisfaction.indexOf("no") >= 0)
+    //{
+      //  response = serverResponses();
+    //}
+  //  else if (satisfaction.indexOf("NO") >= 0
+//|| satisfaction.indexOf("nah") >= 0 || satisfaction.indexOf("naur") >= 0)
+//{
+  //  response = serverResponses();
+//}
+  //  else
+//{
+  //  response = "yay";
+//}
+//}
 
-public String serverResponses()
-{
-    int NUMBER_OF_RESPONSES = 4;
-    double responseIndex = Math.random();
-    int typeOfResponse = (int) (responseIndex * NUMBER_OF_RESPONSES);
-    String response = "";
+//public String serverResponses()
+//{
+  //  int NUMBER_OF_RESPONSES = 4;
+   // double responseIndex = Math.random();
+   // int typeOfResponse = (int) (responseIndex * NUMBER_OF_RESPONSES);
+   // String response = "";
 
-    if (typeOfResponse == 0)
-    {
-        response = "no is not the correct answer >:[";
-    }
-    else if (typeOfResponse == 1)
-    {
-        response = "I won't take no for an answer!";
-    }
-    else if (typeOfResponse == 2)
-    {
-        response = "You better say yes.";
-    }
-    else if (typeOfResponse == 3)
-    {
-        response = "Please say yes I NEEEEEED it :(";
-    }
-    return response;
+    //if (typeOfResponse == 0)
+    //{
+    //    response = "no is not the correct answer >:[";
+    //}
+    //else if (typeOfResponse == 1)
+    //{
+    //    response = "I won't take no for an answer!";
+   // }
+    //else if (typeOfResponse == 2)
+    //{
+   //     response = "You better say yes.";
+  //  }
+   // else if (typeOfResponse == 3)
+   // {
+    //    response = "Please say yes I NEEEEEED it :(";
+  //  }
+  //  return response;
 
-}
+//}
 
 }
