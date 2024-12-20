@@ -9,7 +9,6 @@ import java.util.Random;
  */
 public class ResturauntOrder {
     private int numMeals;
-    private String mealName;
     private String satisfaction;
 
     /**
@@ -48,7 +47,7 @@ public class ResturauntOrder {
     }
 
     /**
-     * sorts list of meals using switch statement
+     * gets meal using switch statement
      * @param mealOrder randomly picks amount of meals based on users number
      * @return list of meals based on mealOrder input
      */
